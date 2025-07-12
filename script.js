@@ -1,25 +1,25 @@
 // ==========================NAVBAR=====================
-  window.addEventListener('scroll', () => {
-    const header = document.getElementById('main-header');
-    if (window.scrollY > 50) {
-      header.classList.add('shadow-md', 'backdrop-blur-md');
-      header.style.backgroundColor = 'rgba(44, 47, 139, 0.85)'; // #2c2f8b + opacity
-    } else {
-      header.classList.remove('shadow-md', 'backdrop-blur-md');
-      header.style.backgroundColor = 'transparent';
-    }
+window.addEventListener("scroll", () => {
+  const header = document.getElementById("main-header");
+  if (window.scrollY > 50) {
+    header.classList.add("shadow-md", "backdrop-blur-md");
+    header.style.backgroundColor = "rgba(0, 0, 0, 0.85)"; // #2c2f8b + opacity
+  } else {
+    header.classList.remove("shadow-md", "backdrop-blur-md");
+    header.style.backgroundColor = "transparent";
+  }
+});
+
+const navbarCheckbox = document.getElementById("navbar-open");
+const menuLinks = document.querySelectorAll("nav ul li a");
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navbarCheckbox.checked = false; // Tutup navbar
   });
-
-  const navbarCheckbox = document.getElementById('navbar-open')
-  const menuLinks = document.querySelectorAll('nav ul li a')
-
-  menuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navbarCheckbox.checked = false; // Tutup navbar
-    })
-  })
+});
 // ==========================HOME===============================
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
   const stepSize = 90;
   const step = Math.floor(scrollY / stepSize);
@@ -51,26 +51,26 @@ window.addEventListener('scroll', () => {
 
   const stepOffset = 20;
 
-  const leftImage = document.getElementById('left-img');
-  const rightImage = document.getElementById('right-img');
+  const leftImage = document.getElementById("left-img");
+  const rightImage = document.getElementById("right-img");
 
   leftImage.style.left = `${baseOffset - step * stepOffset}px`;
   rightImage.style.right = `${baseOffset - step * stepOffset}px`;
 });
 
 // ==========================SLIDER DAFTAR MENU BEST SELLER=====================
-var swiper = new Swiper('.mySwiper', {
+var swiper = new Swiper(".mySwiper", {
   slidesPerView: 5, // jumlah card per layar
   spaceBetween: 16, // jarak antar kartu
   centeredSlides: false,
   loop: true, // infinite
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   breakpoints: {
     1440: { slidesPerView: 5 },
-    1024: {slidesPerView: 4},
+    1024: { slidesPerView: 4 },
     640: { slidesPerView: 2 },
     0: { slidesPerView: 1 },
   },
@@ -100,13 +100,18 @@ document.addEventListener("DOMContentLoaded", function () {
     if (checkedFilters.length === 0 || filterCheckboxes[0].checked) {
       menuTitle.textContent = "All Variants";
     } else {
-      menuTitle.textContent = checkedFilters.map((val) => menuData[val]).join(" & ");
+      menuTitle.textContent = checkedFilters
+        .map((val) => menuData[val])
+        .join(" & ");
     }
 
     // Update card yang ditampilkan
     menuCards.forEach((card) => {
       const categories = card.dataset.category.split(",");
-      const isVisible = filterCheckboxes[0].checked || checkedFilters.length === 0 || checkedFilters.some((filter) => categories.includes(filter));
+      const isVisible =
+        filterCheckboxes[0].checked ||
+        checkedFilters.length === 0 ||
+        checkedFilters.some((filter) => categories.includes(filter));
       card.style.display = isVisible ? "" : "none";
     });
   }
@@ -159,7 +164,8 @@ const testimonials = [
     role: "Youtuber",
   },
   {
-    quote: '"Sejak pertama kali mencoba SeaSpace Coffee, saya langsung jatuh cinta. Selain rasanya yang autentik dan kaya, suasana kafenya begitu nyaman untuk bekerja maupun bersantai. Dengan harga yang bersahabat dan kualitas yang konsisten, SeaSpace benar-benar menjadi pilihan utama saya untuk menikmati secangkir kopi spesial setiap hari."',
+    quote:
+      '"Sejak pertama kali mencoba SeaSpace Coffee, saya langsung jatuh cinta. Selain rasanya yang autentik dan kaya, suasana kafenya begitu nyaman untuk bekerja maupun bersantai. Dengan harga yang bersahabat dan kualitas yang konsisten, SeaSpace benar-benar menjadi pilihan utama saya untuk menikmati secangkir kopi spesial setiap hari."',
     img: "./img/testi-reino.png",
     name: "Reino Aimar Rafif",
     role: "Influencer Tiktok",
@@ -188,7 +194,9 @@ function updateDots() {
   dotsContainer.innerHTML = "";
   testimonials.forEach((_, i) => {
     const dot = document.createElement("button");
-    dot.className = "w-4 h-4 rounded-full mx-1 transition-all duration-200 " + (i === currentTesti ? "bg-[#2C2E83]" : "bg-[#A3A8F0] opacity-80");
+    dot.className =
+      "w-4 h-4 rounded-full mx-1 transition-all duration-200 " +
+      (i === currentTesti ? "bg-[#2C2E83]" : "bg-[#A3A8F0] opacity-80");
     dot.addEventListener("click", () => {
       currentTesti = i;
       showTestimonial(i);
@@ -202,7 +210,8 @@ function setupTestimonialSlider() {
   const btnRight = document.getElementById("testimonial-right");
   if (!btnLeft || !btnRight) return;
   btnLeft.addEventListener("click", () => {
-    currentTesti = (currentTesti - 1 + testimonials.length) % testimonials.length;
+    currentTesti =
+      (currentTesti - 1 + testimonials.length) % testimonials.length;
     showTestimonial(currentTesti);
   });
   btnRight.addEventListener("click", () => {
@@ -214,3 +223,32 @@ function setupTestimonialSlider() {
 
 document.addEventListener("DOMContentLoaded", setupTestimonialSlider);
 
+// ==========================SEARCH FEATURE===============================
+document.addEventListener("DOMContentLoaded", function () {
+  const searchInputs = [
+    document.getElementById("searchInputDesktop"),
+    document.getElementById("searchInputMobile"),
+  ];
+  const cards = document.querySelectorAll("#menu-grid > div");
+
+  function handleSearch(event) {
+    const searchValue = event.target.value.toLowerCase();
+
+    cards.forEach((card) => {
+      const nameElement = card.querySelector(
+        ".flex.flex-col.items-center.w-full span"
+      );
+      const name = nameElement
+        ? nameElement.textContent.toLowerCase().replace(/\s+/g, " ")
+        : "";
+
+      card.style.display = name.includes(searchValue) ? "flex" : "none";
+    });
+  }
+
+  searchInputs.forEach((input) => {
+    if (input) {
+      input.addEventListener("input", handleSearch);
+    }
+  });
+});

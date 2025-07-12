@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Search Tanpa Database</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      input[type="text"] {
+        width: 300px;
+        padding: 10px;
+        font-size: 16px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 20px;
+      }
+      li {
+        padding: 8px;
+        border-bottom: 1px solid #ccc;
+      }
+      li.hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Cari Nama</h2>
+    <input type="text" id="searchInput" placeholder="Ketik untuk mencari..." />
+
+    <ul id="dataList">
+      <li>Andi</li>
+      <li>Budi</li>
+      <li>Citra</li>
+      <li>Dina</li>
+      <li>Eka</li>
+      <li>Fajar</li>
+      <li>Gilang</li>
+    </ul>
+
+    <script>
+      const searchInput = document.getElementById("searchInput");
+      const dataList = document.getElementById("dataList");
+      const listItems = dataList.getElementsByTagName("li");
+
+      searchInput.addEventListener("keyup", function () {
+        const filter = searchInput.value.toLowerCase();
+        for (let i = 0; i < listItems.length; i++) {
+          const txt = listItems[i].textContent.toLowerCase();
+          listItems[i].style.display = txt.includes(filter) ? "" : "none";
+        }
+      });
+    </script>
+  </body>
+</html>

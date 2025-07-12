@@ -20,7 +20,7 @@
 
     <!-- Logo -->
     <a href="#" class="flex items-center font-black z-50">
-      <img src="./img/logo.png" alt="Logo" class="w-16 sm:w-24" />
+      <img src="/img/logo.png" alt="Logo" class="w-16 sm:w-16 pt-3" />
     </a>
 
     <!-- Hidden checkbox toggle -->
@@ -51,56 +51,81 @@
   </div>
 </header>
   <!------------------------------------------------------------------HOME------------------------------------------------------------------>
-    <section class="relative h-screen overflow-hidden" id="home">
-    <!-- Background blur layer -->
-    <div class="absolute inset-0 z-0 bg-custom backdrop-blur-md"></div>
-
-    <!-- Foreground content -->
-    <div id="parallax-container" class="relative z-10 h-full">
-        <div id="left-img" class="absolute bottom-0 left-custom transition-all duration-300">
+  <section class="relative h-screen overflow-hidden" id="home">
+    <!-- Video background -->
+    <video
+      class="absolute inset-0 w-full h-full object-cover z-0"
+      src="./vid/bg_vid.webm"
+      autoplay
+      loop
+      muted
+      playsinline
+    ></video>
+  
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm z-10"></div>
+  
+    <!-- Main content -->
+    <div id="parallax-container" class="relative z-20 h-full flex items-center justify-center">
+      <!-- Floating Images -->
+      <div id="left-img" class="absolute bottom-0 left-custom transition-all duration-300 parallax-fade opacity-0">
         <img
-            class="w-60 sm:w-60 lg:w-80 2xl:w-96"
-            src="./img/tangan-kiri.png"
-            alt="gambar kopi susu tangan kiri"
+          class="w-60 sm:w-60 lg:w-80 2xl:w-96"
+          src="./img/logo.png"
+          alt="gambar kopi susu tangan kiri"
         />
+      </div>
+  
+      <div class="absolute bottom-0 -left-40 transition-all duration-300" id="wave">
+        <img class="w-60 sm:w-60 lg:w-80 2xl:w-96" src="./img/jamkiri.png" alt="gambar jam kiri" />
+      </div>
+      <div class="absolute bottom-0 -right-40 transition-all duration-300" id="wave">
+        <img class="w-48 lg:w-60 2xl:w-80" src="./img/jamkanan.png" alt="gambar jam kanan" />
+      </div>
+  
+      <!-- Konten tengah (logo + deskripsi) -->
+      <div class="relative z-30 w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-20 lg:px-28 gap-10">
+        <!-- KIRI: Logo besar dengan efek floating -->
+        <div class="w-full md:w-1/2 flex justify-center">
+          <img
+            src="./img/logo.png"
+            alt="Logo SeaSpace"
+            class="w-40 sm:w-52 md:w-64 lg:w-72 animate-float"
+          />
         </div>
-
-        <div id="right-img" class="absolute bottom-0 right-custom transition-all duration-300">
-        <img
-            class="w-48 lg:w-60 2xl:w-80"
-            src="./img/tangan-kanan.png"
-            alt="gambar kopi susu tangan kanan"
-        />
-        </div>
-
-        <div id="wave" class="absolute bottom-0 -left-40 transition-all duration-300">
-        <img
-            class="w-custom"
-            src="./img/wave.png"
-            alt="gambar ombak kiri"
-        />
-        </div>
-
-        <div id="wave" class="absolute bottom-0 -right-40 transition-all duration-300">
-        <img
-            class="w-custom"
-            src="./img/wave-right.png"
-            alt="gambar ombak kanan"
-        />
-        </div>
-    </div>
-    </div>
-    </section>
-
-         <!------------------------------------------------------------------PROMO------------------------------------------------------------------>
-    <section id="promo" class="w-full py-0" >
-      <!-- Banner News -->
-      <div class="w-full relative">
-        <img src="./img//bg/bg-home2.png" alt="Promo Banner" class="w-full h-36 object-cover object-center rounded-b-3xl">
-        <div class="absolute inset-0 bg-[#2C2E83]/80 flex items-center justify-center">
-          <h2 class="text-white text-3xl  sm:text-4xl lg:text-6xl font-extrabold md:pl-8 drop-shadow-lg tracking-wide" style="font-family: 'Montserrat', sans-serif; letter-spacing: 0.05em;">LATEST PROMO!</h2>
+  
+        <!-- KANAN: Deskripsi sejajar navbar -->
+        <div class="w-full md:w-1/2 text-white space-y-4 text-center md:text-left">
+          <h1 class="text-2xl md:text-4xl font-bold text-[#d4af37]">Tentang Aris Watch and Clock</h1>
+          <p class="text-sm md:text-lg leading-relaxed">
+            Aris Watch and Clock menghadirkan koleksi jam dinding beragam, mulai dari desain minimalis modern hingga sentuhan klasik dan artistik. Setiap jam dirancang untuk mempercantik ruangan sekaligus menjadi penunjuk waktu yang akurat, menjadikannya pilihan tepat bagi Anda yang mencari fungsi dan estetika dalam satu produk.
+          </p>
+          <a
+            href="https://www.instagram.com/seaspace.coffee/"
+            target="_blank"
+            class="inline-block mt-4 bg-[#d4af37] text-black font-bold py-2 px-4 rounded-3xl hover:bg-white hover:text-gray-800 transition"
+          >
+            Visit Us
+          </a>
         </div>
       </div>
+    </div>
+  </section>
+  
+         <!------------------------------------------------------------------OUR LATEST PRODUCT------------------------------------------------------------------>
+    <section id="promo" class="w-full py-0" >
+      <!-- Banner News -->
+<div class="w-full relative bg-[url('/Img/brick-pattern1.png')] bg-cover bg-center rounded-b-3xl">
+  <!-- Gradient transparan ke putih -->
+  <div class="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-b from-transparent to-white z-10"></div>
+
+  <!-- Isi teks -->
+  <div class="absolute inset-0 flex items-center justify-center z-20">
+    <marquee class="text-black text-3xl sm:text-4xl lg:text-6xl font-extrabold md:pl-8 drop-shadow-lg tracking-wide" style="font-family: 'Montserrat', sans-serif; letter-spacing: 0.05em;">
+      OUR LATEST PRODUCT!!!
+    </marquee>
+  </div>
+</div>
       <!-- Grid News Card -->
       <div class="max-w-screen-lg mx-auto px-4 py-16">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -137,7 +162,7 @@
     <!-- SECTION NEWS END -->
 
       <!------------------------------------------------------------------PRODUCTS------------------------------------------------------------------>
-    <section class="w-full py-8 pt-16 pb-28 bg-[url('./img/bg/bg-home2.png')] bg-center bg-cover bg-no-repeat" id="products" alt="background seaspace">
+    <section class="w-full py-8 pt-16 pb-28 bg-[url('./img/brick-pattern1.jpg')] bg-center bg-cover bg-no-repeat" id="products" alt="background seaspace">
       <div class="swiper mySwiper">
         <div class="flex justify-center mb-10">
           <h1 class="bg-very-light-purple text-white font-bold p-3 rounded-3xl text-3xl">
@@ -238,6 +263,15 @@
         <div id="filter-popup" class="fixed inset-0 z-50 hidden md:hidden">
           <div class="bg-white h-full w-4/5 max-w-xs shadow-xl rounded-r-2xl p-6 relative animate-slideInLeft">
             <button id="filter-close" class="absolute top-4 right-4 text-[#2C2E83] text-3xl font-bold z-10">&times;</button>
+            <!-- Search Box -->
+<div class="mb-6">
+  <input
+    type="text"
+    id="searchInputMobile"
+    placeholder="Cari menu disini..."
+    class="w-full max-w-md px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2C2E83] mx-auto block"
+  />
+</div>
             <div class="flex items-center gap-2 mb-4 text-[#2C2E83] font-bold">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h8m-8 6h16"></path></svg>
               <span>Filter</span>
@@ -253,7 +287,16 @@
           </div>
         </div>
         <!-- Sidebar filter desktop -->
-        <aside class="menu-filter-aside hidden md:block">
+        <aside class="bg-[url('/Img/pattern2.png')] bg-full menu-filter-aside hidden md:block shadow-2xl">
+          <!-- Search Box -->
+<div class="mb-6">
+  <input
+    type="text"
+    id="searchInputDesktop"
+    placeholder="Cari menu disini..."
+    class="w-full max-w-md px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2C2E83] mx-auto block"
+  />
+</div>
           <div class="flex items-center gap-2 mb-4 text-[#ffffff] font-bold">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h8m-8 6h16"></path></svg>
             <span>Filter</span>
@@ -269,8 +312,8 @@
         </aside>
         <!-- Menu Grid -->
         <div class="flex-1 md:order-2 order-1">
-          <div class="bg-[#2C2E83] rounded-3xl p-6">
-            <h2 class="text-white font-bold text-2xl mb-6" id="menu-title">Coffee</h2>
+          <div class="bg-[url('/Img/pattern2.jpg')] bg-center rounded-3xl p-6 shadow-2xl">
+            <h2 class="text-black font-bold text-2xl mb-6" id="menu-title">Coffee</h2>
             <div id="menu-grid" class="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 xl:grid-cols-5">
               <!-- Card 1 -->
               <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="coffee,milk">
@@ -564,7 +607,7 @@
 
     <!--MOBILE-->
     <div class="md:row-span-2 md:col-span-1 sm:hidden block">
-      <img class="w-32 sm:w-48 sm:h-48" src="./img/logo it's day.png" alt="Logo It's Day" />
+      <img class="w-32 sm:w-48 sm:h-48" src="./img/logo.png" alt="Logo It's Day" />
     </div>
     <div class="sm:hidden flex flex-col py-2">
       <p class="text-white text-justify text-xs">Jl. Sempur No.23, RT.03/RW.01, Sempur, Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat 16129</p>
@@ -619,7 +662,7 @@
       
         <!-- Bagian paling luar sudah ok -->
          <div class="hidden sm:block max-w-screen-xl mx-auto grid grid-cols-6 gap-6 text-sm items-start px-6">
-            <img class="w-32 sm:w-24 sm:h-24" src="./img/logo it's day.png" alt="Logo It's Day" /> 
+            <img class="w-32 sm:w-24 sm:w-24" src="./img/logo.png" alt="Logo It's Day" /> 
          </div>
         <div class="max-w-screen-xl mx-auto grid grid-cols-6 gap-6 md:text-xs lg:text-sm items-start px-6">
 
