@@ -49,7 +49,7 @@
 
     <!-- Mobile nav -->
     <nav
-      class=" fixed top-0 right-0 h-screen w-full bg-very-light-purple sm:bg-very-light-purple text-white transform -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 sm:static sm:translate-x-0 sm:flex sm:items-center sm:h-auto sm:bg-transparent sm:w-auto sm:text-white z-40">
+  class="fixed top-0 right-0 h-screen w-full bg-[url('/Img/pattern2.png')] sm:bg-none text-white transform -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 sm:static sm:translate-x-0 sm:flex sm:items-center sm:h-auto sm:w-auto sm:text-white z-40">
       <ul class="flex flex-col gap-y-6 p-6 pt-24 sm:flex-row sm:gap-x-8 sm:p-0 sm:pt-4">
         <li><a href="#home" class="text-white-purple hover:text-indigo-600 transition-all duration-400 font-bold text-sm md:text-xs lg:text-sm">HOME</a></li>
         <li><a href="#latest" class="text-white-purple hover:text-indigo-600 transition-all duration-400  font-bold text-sm md:text-xs lg:text-sm">LATEST</a></li>
@@ -59,7 +59,7 @@
         <!-- <li><a href="#testimonial" class="text-white-purple hover:text-indigo-600 transition-all duration-400  font-bold text-sm md:text-xs lg:text-sm">REVIEW</a></li> -->
         <li><a href="#contact" class="text-white-purple hover:text-indigo-600 transition-all duration-400  font-bold text-sm md:text-xs lg:text-sm">CONTACT</a></li>
       </ul>
-      <img src="./img/wave.png" alt="gambar ombak" class=" sm:hidden absolute w-96 bottom-0">
+      <!--<img src="./img/pattern1.png" alt="gambar ombak" class=" sm:hidden absolute w-64 bottom-0">-->
     </nav>
   </div>
 </header>
@@ -90,10 +90,10 @@
       </div>
   
       <div class="absolute bottom-0 -left-20 transition-all duration-300" id="wave">
-        <img class="w-60 sm:w-60 lg:w-80 2xl:w-96" src="./img/jamkiri.png" alt="gambar jam kiri" />
+        <img class="w-40 sm:w-60 lg:w-80 2xl:w-96" src="./img/jamkiri.png" alt="gambar jam kiri" />
       </div>
-      <div class="absolute bottom-0 -right-10 transition-all duration-300" id="wave">
-        <img class="w-48 lg:w-60 2xl:w-80" src="./img/jamkanan.png" alt="gambar jam kanan" />
+      <div class="absolute bottom-0 -right-10 xl:-right-32 transition-all duration-300" id="wave">
+        <img class="w-32 lg:w-60 2xl:w-80" src="./img/jamkanan.png" alt="gambar jam kanan" />
       </div>
   
       <!-- Konten tengah (logo + deskripsi) -->
@@ -264,7 +264,7 @@
     <section class="py-10 ">
       <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row gap-3">
         <!-- Tombol Filter (mobile only) -->
-        <button id="filter-toggle" class="block md:hidden bg-transparent text-gray-700 font-bold px-0 py-2 rounded-xl mb-2 w-full text-lg flex items-center gap-2">
+        <button id="filter-toggle" class="block md:hidden bg-transparent text-black font-bold px-0 py-2 rounded-xl mb-2 w-full text-lg flex items-center gap-2">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path d="M4 6h16M8 12h8M10 18h4" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -283,18 +283,26 @@
     class="w-full max-w-md px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2C2E83] mx-auto block"
   />
 </div>
-            <div class="flex items-center gap-2 mb-4 text-gray-700 font-bold">
+            <div class="flex items-center gap-2 mb-4 text-black font-bold">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h8m-8 6h16"></path></svg>
               <span>Filter</span>
             </div>
-            <div class="font-bold text-lg mb-2 text-gray-700">Variant</div>
-            <ul class="space-y-2 text-gray-700">
-              <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#2C2E83]" value="all" checked>All Variant</label></li>
-              <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#2C2E83]" value="coffee">Coffee</label></li>
-              <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#2C2E83]" value="milk">Milk Base</label></li>
-              <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#2C2E83]" value="signature">Signature</label></li>
-              <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#2C2E83]" value="tea">Tea & Mocktails</label></li>
-            </ul>
+<ul class="space-y-2 text-black">
+  <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-black" value="all" checked>All Variant</label></li>
+  
+<!-- Tambahkan bagian Mesin dan Model seperti pada versi desktop -->
+<div class="font-bold text-lg mt-6 mb-2 text-black">Mesin</div>
+<ul class="space-y-2 text-black">
+  <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-black" value="analog">Analog</label></li>
+  <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-black" value="digital">Digital</label></li>
+</ul>
+
+<div class="font-bold text-lg mt-6 mb-2 text-black">Model</div>
+<ul class="space-y-2 text-black">
+  <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-black" value="bulat">Bulat</label></li>
+  <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-black" value="kotak">Kotak</label></li>
+  <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-black" value="klasik">Klasik</label></li>
+</ul>
           </div>
         </div>
         <!-- Sidebar filter desktop -->
