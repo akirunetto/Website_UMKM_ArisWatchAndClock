@@ -162,16 +162,14 @@
     <!-- SECTION NEWS END -->
 
       <!------------------------------------------------------------------PRODUCTS------------------------------------------------------------------>
-    <section class="w-full py-8 pt-16 pb-28 bg-[url('./img/brick-pattern1.jpg')] bg-center bg-cover bg-no-repeat" id="products" alt="background seaspace">
+    <section class="w-full bg-[url('./img/brick-pattern1.png')] bg-center bg-cover bg-no-repeat" id="products" alt="background seaspace">
       <div class="swiper mySwiper">
-        <div class="flex justify-center mb-10">
-          <h1 class="bg-very-light-purple text-white font-bold p-3 rounded-3xl text-3xl">
-              Best Seller!
-          </h1>
+        <div class="flex justify-center items-center mb-10">
+          <h2 class="text-white text-3xl sm:text-4xl lg:text-6xl font-extrabold md:pl-8 drop-shadow-lg pt-8">OUR COLLECTIONS</h2>>
         </div>
 
-        <div class="swiper-wrapper">
-          <!-- Ganti isi per-slide sesuai kebutuhan -->
+        <!-- <div class="swiper-wrapper">
+          <!-- Ganti isi per-slide sesuai kebutuhan //
           <div class="swiper-slide bg-[#F5F6FF] rounded-2xl p-4 flex flex-col items-center text-white">
             <img src="./img/produk/chocolate-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Chocolate SeaSpace" />
               <h1 class="bg-very-light-purple text-white font-bold p-3 rounded-3xl text-sm">
@@ -240,12 +238,12 @@
                   Blackforest SeaSpace
               </h1>
           </div>
-        </div>
+        </div> -->
 
-        <!-- Navigation -->
+        <!-- Navigation --
         <div class="swiper-button-next w-10 text-blue-900 bg-white/50 rounded-full p-8 hover:bg-white/70 transition"></div>
         <div class="swiper-button-prev w-10 text-blue-900 bg-white/50 rounded-full p-8 hover:bg-white/70 transition"></div>
-      </div>
+      </div>-->
     </section>
 
   <!------------------------------------------------------------------MENU PRODUCTS------------------------------------------------------------------>
@@ -253,7 +251,7 @@
     <section class="py-10 ">
       <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row gap-3">
         <!-- Tombol Filter (mobile only) -->
-        <button id="filter-toggle" class="block md:hidden bg-transparent text-[#2C2E83] font-bold px-0 py-2 rounded-xl mb-2 w-full text-lg flex items-center gap-2">
+        <button id="filter-toggle" class="block md:hidden bg-transparent text-gray-700 font-bold px-0 py-2 rounded-xl mb-2 w-full text-lg flex items-center gap-2">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path d="M4 6h16M8 12h8M10 18h4" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -262,7 +260,7 @@
         <!-- Pop up filter mobile -->
         <div id="filter-popup" class="fixed inset-0 z-50 hidden md:hidden">
           <div class="bg-white h-full w-4/5 max-w-xs shadow-xl rounded-r-2xl p-6 relative animate-slideInLeft">
-            <button id="filter-close" class="absolute top-4 right-4 text-[#2C2E83] text-3xl font-bold z-10">&times;</button>
+            <button id="filter-close" class="absolute top-4 right-4 text-gray-700 text-3xl font-bold z-10">&times;</button>
             <!-- Search Box -->
 <div class="mb-6">
   <input
@@ -272,12 +270,12 @@
     class="w-full max-w-md px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#2C2E83] mx-auto block"
   />
 </div>
-            <div class="flex items-center gap-2 mb-4 text-[#2C2E83] font-bold">
+            <div class="flex items-center gap-2 mb-4 text-gray-700 font-bold">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h8m-8 6h16"></path></svg>
               <span>Filter</span>
             </div>
-            <div class="font-bold text-lg mb-2 text-[#2C2E83]">Variant</div>
-            <ul class="space-y-2 text-[#2C2E83]">
+            <div class="font-bold text-lg mb-2 text-gray-700">Variant</div>
+            <ul class="space-y-2 text-gray-700">
               <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#2C2E83]" value="all" checked>All Variant</label></li>
               <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#2C2E83]" value="coffee">Coffee</label></li>
               <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#2C2E83]" value="milk">Milk Base</label></li>
@@ -301,13 +299,19 @@
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h8m-8 6h16"></path></svg>
             <span>Filter</span>
           </div>
-          <div class="font-bold text-lg mb-2 text-[#ffffff]">Variant</div>
           <ul class="space-y-2 text-[#ffffff]">
-            <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#ffffff]" value="all" checked>All Variant</label></li>
-            <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#ffffff]" value="coffee">Coffee</label></li>
-            <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#ffffff]" value="milk">Milk Base</label></li>
-            <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#ffffff]" value="signature">Signature</label></li>
-            <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#ffffff]" value="tea">Tea & Mocktails</label></li>
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#ffffff]" value="all">All Variant</label></li>
+          </ul>
+          <div class="font-bold text-lg mb-2 text-[#ffffff]">Mesin</div>
+          <ul class="space-y-2 text-[#ffffff]">
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#ffffff]" value="analog">Analog</label></li>
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#ffffff]" value="digital">Digital</label></li>
+          </ul>
+          <div class="font-bold text-lg mb-2 text-[#ffffff]">Model</div>
+          <ul class="space-y-2 text-[#ffffff]">
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#ffffff]" value="bulat">Bulat</label></li>
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#ffffff]" value="kotak">Kotak</label></li>
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#ffffff]" value="klasik">Klasik</label></li>
           </ul>
         </aside>
         <!-- Menu Grid -->
@@ -316,178 +320,178 @@
             <h2 class="text-black font-bold text-2xl mb-6" id="menu-title">Coffee</h2>
             <div id="menu-grid" class="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 xl:grid-cols-5">
               <!-- Card 1 -->
-              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="coffee,milk">
+              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-black rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="analog,bulat">
                 <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
-                  <img src="./img/produk/kopsus.png" alt="Sea Space Coffee" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <img src="./img/produk/analog1.jpg" alt="Sea Space Coffee" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
                   <div class="flex w-full justify-between items-end mt-1">
-                    <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Kopi <br> Susu</span>
-                    <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
+                    <span class="font-bold text-black text-left text-base leading-tight text-sm lg:text-md mt-1">Jam Dinding <br> Analog Bulat</span>
+                    <span class="font-bold text-black text-right text-base flex items-end gap-1 whitespace-nowrap">
                       <span class="text-xs align-bottom">Rp</span>
-                      <span class="text-base text-lg lg:text-2xl leading-none">9</span>
+                      <span class="text-base text-lg lg:text-2xl leading-none">35</span>
                       <span class="text-xs align-bottom">rb</span>
                     </span>
                   </div>
                 </div>
-                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white  text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                  "Kopi susu dengan sentuhan manis alami. Nikmat, lembut, dan khas!"<br>~MinSea~
-                  <img src="./img/wave.png" alt="gambar ombak" class="w-12 mx-auto mt-2" />
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white  text-gray-700 text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  "Jam Dinding bermesin analog dengan model bulat. Tersedia berbagai warna."<br>
+                  <img src="./img/jamkiri.png" alt="gambar ombak" class="w-12 mx-auto mt-2" />
                 </div>
               </div>
               <!-- Card 2 -->
-              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="milk">
+              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-black rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="analog,kotak">
                 <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
-                  <img src="./img/produk/chocolate.png" alt="Chocolate" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <img src="./img/produk/analog2.png" alt="Chocolate" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
                   <div class="flex w-full justify-between items-end mt-1">
-                    <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Choco <br> late</span>
-                    <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
+                    <span class="font-bold text-black text-left text-base leading-tight text-sm lg:text-md mt-1">Jam Dinding <br> Analog Kotak</span>
+                    <span class="font-bold text-black text-right text-base flex items-end gap-1 whitespace-nowrap">
                       <span class="text-xs align-bottom">Rp</span>
-                      <span class="text-base text-lg lg:text-2xl leading-none">15</span>
+                      <span class="text-base text-lg lg:text-2xl leading-none">40</span>
                       <span class="text-xs align-bottom">rb</span>
                     </span>
                   </div>
                 </div>
-                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">"Cokelat kaya rasa dengan kelembutan susu. Manis, hangat, dan bikin nagih!"<br>~MinSea~
-                  <img src="./img/wave.png" alt="wave" class="w-12 mx-auto mt-2" />
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-gray-700 text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">"Jam Dindin bermesin analog dengan model Kotak. Tersedia berbagai varian warna."<br>
+                  <img src="./img/jamkiri.png" alt="wave" class="w-12 mx-auto mt-2" />
                 </div>
               </div>
               <!-- Card 3 -->
-              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="signature">
+              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-black rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="digital,kotak">
                 <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
-                  <img src="./img/produk/blackforest.png" alt="Blackforest" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <img src="./img/produk/digital1.png" alt="Blackforest" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
                   <div class="flex w-full justify-between items-end mt-1">
-                    <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Black <br> forest</span>
-                    <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
+                    <span class="font-bold text-black text-left text-base leading-tight text-sm lg:text-md mt-1"><br>Jam Weker <br> Digital</span>
+                    <span class="font-bold text-black text-right text-base flex items-end gap-1 whitespace-nowrap">
                       <span class="text-xs align-bottom">Rp</span>
                       <span class="text-base text-lg lg:text-2xl leading-none">18</span>
                       <span class="text-xs align-bottom">rb</span>
                     </span>
                   </div>
                 </div>
-                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                  "Rasa Coklat & Kopi, Seperti Kue BlackForest"<br>~MinSea~
-                  <img src="./img/wave.png" alt="wave" class="w-12 mx-auto mt-2" />
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-gray-700 text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  "Jam bermesin digital. Dilengkapi dengan fitur alarm yang siap bangunin kamu di pagi hari."<br>
+                  <img src="./img/jamkiri.png" alt="wave" class="w-12 mx-auto mt-2" />
                 </div>
               </div>
               <!-- Card 4 -->
-              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="milk">
+              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-black rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="digital,bulat">
                 <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
-                  <img src="./img/produk/greentea.png" alt="Greentea" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <img src="./img/produk/digital2.png" alt="Greentea" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
                   <div class="flex w-full justify-between items-end mt-1">
-                    <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Green<br>Tea</span>
-                    <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
+                    <span class="font-bold text-black text-left text-base leading-tight text-sm lg:text-md mt-1">Jam Weker<br>Digital Bulat</span>
+                    <span class="font-bold text-black text-right text-base flex items-end gap-1 whitespace-nowrap">
                       <span class="text-xs align-bottom">Rp</span>
-                      <span class="text-base text-lg lg:text-2xl leading-none">17</span>
+                      <span class="text-base text-lg lg:text-2xl leading-none">67</span>
                       <span class="text-xs align-bottom">rb</span>
                     </span>
                   </div>
                 </div>
-                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                  "Matcha berpadu susu creamy. Nikmat sampai tegukan terakhir!"<br>~MinSea~
-                  <img src="./img/wave.png" alt="wave" class="w-12 mx-auto mt-2" />
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-gray-700 text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  "Jam Weker digital yang dilengkapi dengan fitur alarm dan juga tanggal. Siap menemani kesepianmu."<br>
+                  <img src="./img/jamkiri.png" alt="wave" class="w-12 mx-auto mt-2" />
                 </div>
               </div>
               <!-- Card 5 -->
-              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="tea">
+              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-black rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="klasik">
                 <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
-                  <img src="./img/produk/lemontea.png" alt="Lemon Tea" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <img src="./img/produk/klasik1.png" alt="Lemon Tea" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
                   <div class="flex w-full justify-between items-end mt-1">
-                    <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Lemon<br>Tea</span>
-                    <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
+                    <span class="font-bold text-black text-left text-base leading-tight text-sm lg:text-md mt-1">Jam Dinding<br>Antik Klasik</span>
+                    <span class="font-bold text-black text-right text-base flex items-end gap-1 whitespace-nowrap">
                       <span class="text-xs align-bottom">Rp</span>
                       <span class="text-base text-lg lg:text-2xl leading-none">14</span>
                       <span class="text-xs align-bottom">rb</span>
                     </span>
                   </div>
                 </div>
-                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                  Perpaduan teh segar dan perasan lemon asli. cocok untuk pelepas dahaga!<br>~MinSea~
-                  <img src="./img/wave.png" alt="wave" class="w-12 mx-auto mt-2" />
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-gray-700 text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  Jam dindin dengan model classik dan antik. Cocok untuk kamu yang suka nyeni.<br>
+                  <img src="./img/jamkiri.png" alt="wave" class="w-12 mx-auto mt-2" />
                 </div>
               </div>
               <!-- Card 6 -->
-              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="tea">
+              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-black rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="klasik,bulat">
                 <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
-                  <img src="./img/produk/blueocean.png" alt="Ocean Blue" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <img src="./img/produk/klasik2.png" alt="Ocean Blue" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
                   <div class="flex w-full justify-between items-end mt-1">
-                    <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Ocean<br>Blue</span>
-                    <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
+                    <span class="font-bold text-black text-left text-base leading-tight text-sm lg:text-md mt-1">Jam Dinding<br>Klasik Bulat</span>
+                    <span class="font-bold text-black text-right text-base flex items-end gap-1 whitespace-nowrap">
                       <span class="text-xs align-bottom">Rp</span>
                       <span class="text-base text-lg lg:text-2xl leading-none">20</span>
                       <span class="text-xs align-bottom">rb</span>
                     </span>
                   </div>
                 </div>
-                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                  "Minuman dengan tampilan laut biru. Segar, manis, dan memikat!"<br>~MinSea~
-                  <img src="./img/wave.png" alt="wave" class="w-12 mx-auto mt-2" />
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-gray-700 text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  "Jam dinding bulat dengan model klasik. Cocok buat kamu yang tidak ingin jam dinding monoton."<br>
+                  <img src="./img/jamkiri.png" alt="wave" class="w-12 mx-auto mt-2" />
                 </div>
               </div>
               <!-- Card 7 -->
-              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="coffee">
+              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-black rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="soon">
                 <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
-                  <img src="./img/produk/americano.png" alt="Americano" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <img src="./img/produk/soon.png" alt="Americano" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
                   <div class="flex w-full justify-between items-end mt-1">
-                    <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Ameri<br>cano</span>
-                    <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
-                      <span class="text-xs align-bottom">Rp</span>
-                      <span class="text-base text-lg lg:text-2xl leading-none">15</span>
-                      <span class="text-xs align-bottom">rb</span>
+                    <span class="font-bold text-black text-left text-base leading-tight text-sm lg:text-md mt-1"><br><br>Coming<br>Soon</span>
+                    <span class="font-bold text-black text-right text-base flex items-end gap-1 whitespace-nowrap">
+                      <!-- <span class="text-xs align-bottom">Rp</span>
+                      <span class="text-base text-lg lg:text-2xl leading-none">0</span>
+                      <span class="text-xs align-bottom">rb</span> -->
                     </span>
                   </div>
                 </div>
-                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">"Kopi hitam pekat untuk kamu yang suka cita rasa kuat dan murni."<br>~MinSea~
-                  <img src="./img/wave.png" alt="gambar ombak" class="w-12 mx-auto mt-2" />
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-gray-700 text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">"Masih rahasia nih ditunggu ya..."<br>
+                  <img src="./img/jamkanan.png" alt="gambar ombak" class="w-12 mx-auto mt-2" />
                 </div>
               </div>
               <!-- Card 8 -->
-              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="milk">
+              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-black rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="soon">
                 <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
                   <img src="./img/produk/soon.png" alt="Red Velvet" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
                   <div class="flex w-full justify-between items-end mt-1">
-                    <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Red<br>Velvet</span>
-                    <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
-                      <span class="text-xs align-bottom">Rp</span>
-                      <span class="text-base text-lg lg:text-2xl leading-none">15</span>
-                      <span class="text-xs align-bottom">rb</span>
+                    <span class="font-bold text-black text-left text-base leading-tight text-sm lg:text-md mt-1"><br><br>Coming<br>Soon</span>
+                    <span class="font-bold text-black text-right text-base flex items-end gap-1 whitespace-nowrap">
+                      <!-- <span class="text-xs align-bottom">Rp</span>
+                      <span class="text-base text-lg lg:text-2xl leading-none">0</span>
+                      <span class="text-xs align-bottom">rb</span> -->
                     </span>
                   </div>
                 </div>
-                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">"Masih rahasia nih ditunggu ya..."<br>~MinSea~
-                  <img src="./img/wave.png" alt="wave" class="w-12 mx-auto mt-2" />
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-gray-700 text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">"Masih rahasia nih ditunggu ya..."<br>
+                  <img src="./img/jamkanan.png" alt="wave" class="w-12 mx-auto mt-2" />
                 </div>
               </div>
               <!-- Card 9 -->
-              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="tea">
+              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-black rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="soon">
                 <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
                   <img src="./img/produk/soon.png" alt="Passion Fruit" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
                   <div class="flex w-full justify-between items-end mt-1">
-                    <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Passion<br>Fruit</span>
-                    <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
-                      <span class="text-xs align-bottom">Rp</span>
-                      <span class="text-base text-lg lg:text-2xl leading-none">14</span>
-                      <span class="text-xs align-bottom">rb</span>
+                    <span class="font-bold text-black text-left text-base leading-tight text-sm lg:text-md mt-1"><br><br>Coming<br>Soon</span>
+                    <span class="font-bold text-black text-right text-base flex items-end gap-1 whitespace-nowrap">
+                      <!-- <span class="text-xs align-bottom">Rp</span>
+                      <span class="text-base text-lg lg:text-2xl leading-none">0</span>
+                      <span class="text-xs align-bottom">rb</span> -->
                     </span>
                   </div>
                 </div>
-                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">"Masih rahasia nih ditunggu ya..."<br>~MinSea~
-                  <img src="./img/wave.png" alt="wave" class="w-12 mx-auto mt-2" />
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-gray-700 text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">"Masih rahasia nih ditunggu ya..."<br>
+                  <img src="./img/jamkanan.png" alt="wave" class="w-12 mx-auto mt-2" />
                 </div>
               </div>
               <!-- Card 10 -->
-              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="tea">
+              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-black rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="soon">
                 <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
                   <img src="./img/produk/soon.png" alt="Sea Salt" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
                   <div class="flex w-full justify-between items-end mt-1">
-                    <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Sea<br>Salt</span>
-                    <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
-                      <span class="text-xs align-bottom">Rp</span>
-                      <span class="text-base text-lg lg:text-2xl leading-none">18</span>
-                      <span class="text-xs align-bottom">rb</span>
+                    <span class="font-bold text-black text-left text-base leading-tight text-sm lg:text-md mt-1"><br><br>Coming<br>Soon</span>
+                    <span class="font-bold text-black text-right text-base flex items-end gap-1 whitespace-nowrap">
+                      <!-- <span class="text-xs align-bottom">Rp</span>
+                      <span class="text-base text-lg lg:text-2xl leading-none">0</span>
+                      <span class="text-xs align-bottom">rb</span> -->
                     </span>
                   </div>
                 </div>
-                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200"> "Masih rahasia nih ditunggu ya..."<br>~MinSea~
-                  <img src="./img/wave.png" alt="gambar ombak" class="w-12 mx-auto mt-2" />
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-gray-700 text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200"> "Masih rahasia nih ditunggu ya..."<br>
+                  <img src="./img/jamkanan.png" alt="gambar ombak" class="w-12 mx-auto mt-2" />
                 </div>
             </div>
           </div>
@@ -497,7 +501,7 @@
 
     <!------------------------------------------------------------------OUR STORY------------------------------------------------------------------>
     <div class="flex justify-center flex-col items-center md:px-40 mb-4" id="story">
-      <img src="./img/judul/judul-story.png" alt="judul story" class="w-64 md:w-96 mb-1 pt-20">
+      <img src="./img/judul/judul-story.png" alt="judul story" class="w-64 md:w-2/4 mb-1 pt-20">
         <p class="text-center text-xs md:text-lg">
           The Journey of Aris Watch and Clock in time.</p>
     </div>
@@ -506,14 +510,21 @@
       <div class="w-full md:w-1/2 flex flex-col justify-center p-6 space-y-4 text-black md:mt-10 text-sm md:text-lg pb-20">
         <p>Setiap jarum jam yang berputar, setiap detik yang berlalu, menyimpan sebuah cerita. Aris Watch and Clock lahir dari kecintaan yang mendalam pada waktu dan keindahan yang terkandung di dalamnya. Berawal dari impian sederhana untuk menghadirkan lebih dari sekadar penunjuk waktu, kami ingin setiap jam dinding kami menjadi bagian dari cerita hidup Anda, menghiasi dinding rumah dengan sentuhan seni dan ketepatan yang tak lekang oleh waktu.</p>
       </div>
-
       <!-- Right: paragraf -->
-      <div class="w-full md:w-1/2 flex flex-row justify-center p-6 space-y-4 text-black md:mt-10 text-sm md:text-lg">
-        <!-- <p>Kami percaya, sebuah jam bukan hanya alat, melainkan juga cerminan jiwa dan gaya. Dengan dedikasi dan ketelitian, kami merangkai setiap detail, mulai dari desain minimalis modern hingga sentuhan klasik yang artistik, untuk menciptakan karya yang mempesona. Setiap jam yang kami hadirkan adalah buah dari proses panjang, dari ide yang bersemi hingga menjadi benda nyata yang siap menghiasi ruang Anda.</p> -->
-        <div>
-          <button class="bg-very-light-purple py-2 px-4 text-base rounded-3xl text-white font-bold mt-4 mb-10 md:mb-0 hover:bg-white hover:text-slate-400 transition-colors duration-300 text-lg"><a href="https://www.instagram.com/ariswatchnclock">Visit Us</a></button>
-          <button class="bg-very-light-purple py-2 px-4 text-base rounded-3xl text-white font-bold mt-4 mb-10 md:mb-0 hover:bg-white hover:text-slate-400 transition-colors duration-300 text-lg"><a href="https://www.instagram.com/ariswatchnclock">Visit Us</a></button>
-
+      <div class="w-full md:w-1/2 flex flex-col justify-content-center items-center p-6 text-black md:mt-10 text-sm md:text-lg">
+        <!-- KIRI: Logo besar dengan efek floating -->
+        <div class="w-full md:w-1/2 flex justify-center">
+          <img
+            src="./img/logo.png"
+            alt="Logo SeaSpace"
+            class="w-40 sm:w-52 md:w-64 lg:w-68 animate-float"
+          />
+        </div>
+        <!-- Sosial Media Kami-->
+        <div class="flex flex-col mx-auto">
+          <h2 class="text-2xl font-bold text-[#d4af37]">Aris Watch and Clock</h2>
+          <button class="bg-very-light-purple py-2 px-4 text-base rounded-3xl text-white font-bold mt-4 mb-10 md:mb-0 hover:bg-white hover:text-white transition-colors duration-300 text-lg"><a href="https://www.instagram.com/ariswatchnclock">Instagram</a></button>
+          <button class="bg-very-light-purple py-2 px-4 text-base rounded-3xl text-white font-bold mt-4 mb-10 md:mb-0 hover:bg-white hover:text-white transition-colors duration-300 text-lg"><a href="https://id.shp.ee/h3fdEGS">Shopee</a></button>
         </div>
       </div>
     </section>
@@ -522,7 +533,7 @@
     <!------------------------------------------------------------------OUR STORE------------------------------------------------------------------>
     <section class="px-10 md:px-5 mb-20" id="store">
       <div class="flex justify-center flex-col items-center md:px-72">
-        <img src="./img/judul/judul-cafe.png" alt="judul cafe" class="w-40 md:w-64 mb-1 pt-10">
+        <img src="./img/judul/judul-cafe.png" alt="judul cafe" class="w-40 md:w-2/4 mb-1 pt-10">
         <p class="text-center text-xs md:text-lg">
           We are currently located at Taman Merdeka (Depok Dua Tengah) </p>
       </div>
@@ -539,7 +550,7 @@
             <!-- <img src="./img/bg/cafe-1.png" alt="seaspace sempur" width="380px"> -->
 
             <!-- Button -->
-            <!-- <button class="bg-very-light-purple py-2 px-4 text-md rounded-3xl text-white font-bold mt-4 mb-10 md:mb-0 hover:bg-white hover:text-slate-400 transition-colors duration-300">
+            <!-- <button class="bg-very-light-purple py-2 px-4 text-md rounded-3xl text-white font-bold mt-4 mb-10 md:mb-0 hover:bg-white hover:text-white transition-colors duration-300">
               <a href="https://maps.app.goo.gl/wij61xpsCmaGKXycA">Visit Cafe</a>
             </button> -->
           </div>
@@ -556,7 +567,7 @@
             <img src="./img/lokasi.png" alt="seaspace salak" width="380px">
 
             <!-- Button -->
-            <button class="bg-very-light-purple py-2 px-4 text-md rounded-3xl text-white font-bold mt-4 mb-10 md:mb-0 hover:bg-white hover:text-slate-400 transition-colors duration-300">
+            <button class="bg-very-light-purple py-2 px-4 text-md rounded-3xl text-white font-bold mt-4 mb-10 md:mb-0 hover:bg-white hover:text-white transition-colors duration-300">
               <a href="https://maps.app.goo.gl/9yNY776qaAfxXvzs8">Visit Our Store</a>
             </button>
           </div>
@@ -593,7 +604,7 @@
                 <img id="testimonial-img" src="" alt="profile testimonial" class="w-full h-full object-cover rounded-full">
               </div>
               <div class="bg-white rounded-xl px-6 py-3 shadow text-center">
-                <div id="testimonial-name" class="font-bold text-[#2C2E83] text-lg md:text-xl"></div>
+                <div id="testimonial-name" class="font-bold text-gray-700 text-lg md:text-xl"></div>
                 <div id="testimonial-role" class="text-[#5B4DC2] text-base md:text-lg"></div>
               </div>
             </div> -->
@@ -605,121 +616,110 @@
         </div>
       </div>
     </section>
+
   <!------------------------------------------------------------------FOOTER------------------------------------------------------------------>
-  <footer id="contact" class="bg-very-light-purple text-white py-8 px-6 gap-y-4  rounded-t-2xl pr-16 sm:pr-5">
+  <footer id="contact" class="bg-very-light-purple text-white py-8 px-6 gap-y-4 rounded-t-2xl pr-16 sm:pr-5">
 
-    <!--MOBILE-->
-    <div class="md:row-span-2 md:col-span-1 sm:hidden block">
-      <img class="w-32 sm:w-48 sm:h-48" src="./img/logo.png" alt="Logo It's Day" />
-    </div>
-    <div class="sm:hidden flex flex-col py-2">
-      <p class="text-white text-justify text-xs">Jl. Sempur No.23, RT.03/RW.01, Sempur, Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat 16129</p>
-    </div>
+<!-- MOBILE VIEW -->
 
-      <iframe class="sm:hidden block"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.46487959178!2d106.79710301068792!3d-6.588993393377171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c500370e2437%3A0x127b13e1c70bd231!2sSea%20Space%20Coffee!5e0!3m2!1sid!2sid!4v1749351587155!5m2!1sid!2sid" 
-      width="100%" 
-      height="150" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
+  <div class="sm:hidden block">
+    <img class="w-32" src="./img/logo.png" alt="Logo It's Day" />
+    <p class="text-white text-justify text-xs mt-4">
+      Jl. Merdeka No.3, Mekar Jaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16411
+    </p>
+    <iframe class="w-full h-32 rounded-md mt-4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.976204364823!2d106.8399506!3d-6.3970679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ebeb6aa632c7%3A0xa018a57e686cc8a2!2sTaman%20Merdeka%20(Depok%20Dua%20Tengah)!5e0!3m2!1sen!2sid!4v1752387468622!5m2!1sen!2sid" allowfullscreen=""
+      loading="lazy" referrerpolicy="no-referrer-when-downgrade">
     </iframe>
 
-    <div class="sm:hidden block flex flex-row justify-between gap-6 mt-5 text-xs">
-      <!-- links -->
-      <div class="w-1/2">
-        <h3 class="text-white mb-2 font-semibold">Navigation</h3>
+    <div class="flex flex-col gap-y-4 mt-8 text-xs">
+      <div>
+        <h3 class="text-[#d4af37] mb-2 font-semibold">NAVIGATION</h3>
         <div class="space-y-1">
-          <a href="#home" class="text-slate-400 block">Home</a>
-          <a href="#promo" class="text-slate-400 block">Promo</a>
-          <a href="#products" class="text-slate-400 block">Products</a>
-          <a href="#story" class="text-slate-400 block">Story</a>
-          <a href="#store" class="text-slate-400 block">Cafe</a>
-          <a href="#testimonial" class="text-slate-400 block">Review</a>
+          <a href="#home" class="text-white block">Home</a>
+          <a href="#latest" class="text-white block">Latest</a>
+          <a href="#products" class="text-white block">Products</a>
+          <a href="#story" class="text-white block">Our Story</a>
         </div>
       </div>
 
-      <!-- support -->
-      <div class="w-1/2">
-        <h3 class="text-white mb-2 font-semibold">Support</h3>
+      <div>
+        <h3 class="text-[#d4af37] mb-2 font-semibold">MORE</h3>
         <div class="space-y-1">
-          <a href="mailto:reino.aimar14@gmail.com" class="text-slate-400 block">Email</a>
-          <a href="https://wa.me/+6285694014009" class="text-slate-400 block">WhatsApp</a>
+          <a href="#store" class="text-white block">Our Store</a>
         </div>
-        <h3 class="text-white mb-2 mt-3 font-semibold">Social Media</h3>
+      </div>
+
+      <div>
+        <h3 class="text-[#d4af37] mb-2 font-semibold">SUPPORT</h3>
         <div class="space-y-1">
-          <a href="https://www.instagram.com/seaspace.coffee/" class="text-slate-400 block">seaspace.coffee</a>
+          <a href="mailto:ariswatchclock@gmail.com" class="text-white block">Email</a>
+          <a href="https://wa.me/+6288291525118" class="text-white block">WhatsApp</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-[#d4af37] mb-2 font-semibold">SOCIAL MEDIA</h3>
+        <div class="space-y-1">
+          <a href="https://www.instagram.com/ariswatchnclock" class="text-white block">Instagram: @ariswatchnclock</a>
+          <a href="https://youtube.com/@ariswatchclock?si=jS9w-KsYggTo54WG" class="text-white block">Youtube: Aris Watch & Clock</a>
+          <a href="https://id.shp.ee/h3fdEGS" class="text-white block">Shopee: Aris Watch & Clock</a>
         </div>
       </div>
     </div>
 
-      <!-- Divider dan copyright -->
-      <hr class="block sm:hidden max-w-screen-xl mx-auto border-t border-gray-300 mt-8" />
-      <div class="block sm:hidden text-sm text-white mt-4 mb-6">
-          Copyright &copy; 2025 SeaSpace Coffee
+    <hr class="max-w-screen-xl mx-auto border-t border-gray-300 mt-8" />
+    <div class="text-sm text-white mt-4 mb-6 text-center"><span class="font-medium text-[#d4af37] dark:[#d4af37]">Copyright © 2025</span> | Aris Watch and Clock
+    </div>
+  </div>
+
+<!-- Desktop VIEW-->
+  <div class="hidden sm:block max-w-screen-xl mx-auto grid grid-cols-6 gap-6 text-sm items-start px-6">
+    <img class="w-32 sm:w-24 sm:w-24" src="./img/logo.png" alt="Logo It's Day" />
+  </div>
+  <div class="max-w-screen-xl mx-auto grid grid-cols-6 gap-6 md:text-xs lg:text-sm items-start px-6">
+
+    <div class="hidden sm:flex flex-col col-span-2">
+
+      <p class="text-white text-xs text-justify mb-4 leading-relaxed">
+        Jl. Merdeka No.3, Mekar Jaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16411
+      </p>
+      <iframe class="w-full h-32 rounded-md" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.976204364823!2d106.8399506!3d-6.3970679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ebeb6aa632c7%3A0xa018a57e686cc8a2!2sTaman%20Merdeka%20(Depok%20Dua%20Tengah)!5e0!3m2!1sen!2sid!4v1752387468622!5m2!1sen!2sid" allowfullscreen=""
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <div class="mt-10 sm:mt-0 hidden sm:block pl-6">
+      <h3 class="text-[#d4af37] font-semibold mb-2">NAVIGATION</h3>
+      <a href="#home" class="text-white hover:text-white">Home</a><br />
+      <a href="#latest" class="text-white hover:text-white">Latest</a><br />
+      <a href="#products" class="text-white hover:text-white">Products</a><br />
+      <a href="#story" class="text-white hover:text-white">Our Story</a><br />
+    </div>
+
+    <div class="mt-10 sm:mt-0 hidden sm:block PL-6">
+      <h3 class="text-[#d4af37] font-semibold mb-2">MORE</h3>
+      <a href="#store" class="text-white hover:text-white">Our Store</a><br />
       </div>
 
+    <div class="mt-10 sm:mt-0 hidden sm:block PL-6">
+      <h3 class="text-[#d4af37] font-semibold mb-2">SUPPORT</h3>
+      <a href="mailto:ariswatchclock@gmail.com" class="text-white hover:text-white">Email</a><br />
+      <a href="https://wa.me/+6288291525118" class="text-white hover:text-white">WhatsApp</a><br />
+    </div>
 
-    <!--DESKTOP-->
-      
-        <!-- Bagian paling luar sudah ok -->
-         <div class="hidden sm:block max-w-screen-xl mx-auto grid grid-cols-6 gap-6 text-sm items-start px-6">
-            <img class="w-32 sm:w-24 sm:w-24" src="./img/logo.png" alt="Logo It's Day" /> 
-         </div>
-        <div class="max-w-screen-xl mx-auto grid grid-cols-6 gap-6 md:text-xs lg:text-sm items-start px-6">
+    <div class="mt-10 sm:mt-0 hidden sm:block PL-6">
+      <h3 class="text-[#d4af37] font-semibold mb-2">SOCIAL MEDIA</h3>
+      <a href="https://www.instagram.com/ariswatchnclock" class="text-white hover:text-white">Instagram: @ariswatchnclock</a><br />
+      <a href="https://youtube.com/@ariswatchclock?si=jS9w-KsYggTo54WG" class="text-white hover:text-white">Youtube: Aris Watch & Clock</a><br />
+      <a href="https://id.shp.ee/h3fdEGS" class="text-white hover:text-white">Shopee: Aris Watch & Clock</a><br />
+    </div>
+  </div>
 
-          <!-- Kolom 1: Alamat dan Map -->
-          <div class="hidden sm:flex flex-col col-span-2">
-            
-            <p class="text-white text-xs text-justify mb-4 leading-relaxed">
-              Jl. Merdeka No.3, Mekar Jaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16411
-            </p>
-            <iframe 
-              class="w-full h-32 rounded-md" 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.976204364823!2d106.8399506!3d-6.3970679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ebeb6aa632c7%3A0xa018a57e686cc8a2!2sTaman%20Merdeka%20(Depok%20Dua%20Tengah)!5e0!3m2!1sen!2sid!4v1752387468622!5m2!1sen!2sid"
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
-
-          <!-- Kolom 2–4: Support Links -->
-          <div class="mt-10 sm:mt-0 hidden sm:block pl-6">
-            <h3 class="text-white font-semibold mb-2">NAVIGATION</h3>
-            <a href="#home" class="text-slate-400 hover:text-white">Home</a><br />
-            <a href="#latest" class="text-slate-400 hover:text-white">Latest</a><br />
-            <a href="#products" class="text-slate-400 hover:text-white">Products</a><br />
-            <a href="#story" class="text-slate-400 hover:text-white">Our Story</a><br />
-          </div>
-
-          <div class="mt-10 sm:mt-0 hidden sm:block  PL-6">
-            <h3 class="text-white font-semibold mb-2">MORE</h3>
-            <a href="#store" class="text-slate-400 hover:text-white">Our Store</a><br />
-            <!-- <a href="#testimonial" class="text-slate-400 hover:text-white">Review</a><br /> -->
-          </div>
-
-          <div class="mt-10 sm:mt-0 hidden sm:block PL-6">
-            <h3 class="text-white font-semibold mb-2">SUPPORT</h3>
-            <a href="mailto:ariswatchclock@gmail.com" class="text-slate-400 hover:text-white">Email</a><br />
-            <a href="https://wa.me/+6288291525118" class="text-slate-400 hover:text-white">WhatsApp</a><br />
-          </div>
-
-          <!-- Kolom 5: Kebijakan -->
-          <div class="mt-10 sm:mt-0 hidden sm:block PL-6">
-            <h3 class="text-white font-semibold mb-2">SOCIAL MEDIA</h3>
-            <a href="https://www.instagram.com/ariswatchnclock" class="text-slate-400 hover:text-white">Instagram:  @ariswatchnclock</a><br/>
-            <a href="https://youtube.com/@ariswatchclock?si=jS9w-KsYggTo54WG" class="text-slate-400 hover:text-white">Youtube: Aris Watch & Clock</a><br/>
-            <a href="https://id.shp.ee/h3fdEGS" class="text-slate-400 hover:text-white">Shopee: Aris Watch & Clock</a><br/>
-          </div>
-        </div>
-
-        <!-- Divider dan copyright -->
-        <hr class="hidden sm:block max-w-screen-xl mx-auto border-t border-gray-300 mt-8" />
-        <div class="hidden sm:block text-center text-sm text-white mt-4 mb-6">
-          Copyright &copy; 2025 Aris Watch and Clock
-        </div>
-  </footer>
+  <hr class="hidden sm:block max-w-screen-xl mx-auto border-t border-gray-300 mt-8" />
+  <div class="hidden sm:block text-center text-sm text-white mt-4 mb-6">
+    <span class="font-medium text-[#d4af37] dark:[#d4af37]">Copyright © 2025</span> | Aris Watch and Clock
+  </div>
+</footer>
 
 
 
