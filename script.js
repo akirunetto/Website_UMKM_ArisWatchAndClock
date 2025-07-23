@@ -252,3 +252,45 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+/* ==========================METADATA OPTIMIZATION=============================== */
+// Tambahkan metadata secara dinamis (jika belum ada di HTML)
+document.addEventListener("DOMContentLoaded", function () {
+  function setMetaTag(name, content) {
+    let meta = document.querySelector(`meta[name="${name}"]`);
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("name", name);
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute("content", content);
+  }
+
+  function setOGTag(property, content) {
+    let meta = document.querySelector(`meta[property="${property}"]`);
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("property", property);
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute("content", content);
+  }
+
+  // Metadata dasar
+  setMetaTag("description", "Jual jam dinding dan jam tangan berkualitas, desain modern, harga terjangkau. Temukan koleksi jam terbaik untuk rumah dan gaya Anda di Aris Watch And Clock.");
+  setMetaTag("keywords", "jam dinding, jam tangan, jual jam, toko jam, aris watch, aris clock, jam murah, jam berkualitas, jam modern, jam analog, jam digital, jam rumah, jam fashion");
+  setMetaTag("author", "Aris Watch And Clock");
+
+  // Open Graph untuk social sharing
+  setOGTag("og:title", "Aris Watch And Clock - Jual Jam Dinding & Jam Tangan");
+  setOGTag("og:description", "Temukan berbagai jam dinding dan jam tangan berkualitas dengan harga terbaik. Cocok untuk rumah, kantor, dan hadiah.");
+  setOGTag("og:type", "website");
+  setOGTag("og:url", window.location.href);
+  setOGTag("og:image", window.location.origin + "/img/og-image.jpg"); // Pastikan gambar og-image.jpg tersedia
+
+  // Twitter Card
+  setMetaTag("twitter:card", "summary_large_image");
+  setMetaTag("twitter:title", "Aris Watch And Clock - Jual Jam Dinding & Jam Tangan");
+  setMetaTag("twitter:description", "Jual jam dinding dan jam tangan berkualitas, desain modern, harga terjangkau.");
+  setMetaTag("twitter:image", window.location.origin + "/img/og-image.jpg");
+});

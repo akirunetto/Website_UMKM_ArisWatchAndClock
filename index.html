@@ -14,6 +14,15 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <style>
+
+/* SEO Metadata */
+:root {
+  --site-title: "Aris Watch & Clock";
+  --site-description: "Aris Watch and Clock menghadirkan koleksi jam dinding beragam, mulai dari desain minimalis modern hingga sentuhan klasik dan artistik. Pilihan tepat bagi Anda yang mencari fungsi dan estetika dalam satu produk.";
+  --site-keywords: "jam dinding, jam analog, jam digital, jam klasik, jam antik, aris watch, aris clock, toko jam depok, jam murah, jam unik";
+  --site-author: "Aris Watch & Clock";
+}
+
   /* Animasi Toast */
   #toast-container > div {
     animation: slide-in 0.3s ease-out;
@@ -591,58 +600,73 @@
     </section>
 
     <!-- Bagian Keranjang -->
-<!-- Cart Section: Fixed bottom-right, hide when touching footer or on #home/#latest -->
+<!-- Cart Section: Fixed bottom-right, hide when touching footer or on #home/#latest or other sections except #products/menu -->
 <div id="cart-section" class="fixed right-4 bottom-4 z-50 bg-gray-100 rounded-lg shadow-lg w-80 max-w-full p-4 flex flex-col items-center transition-all duration-300">
   <h2 class="text-lg font-bold mb-2 text-center">🛒 Keranjang</h2>
   <div id="cart-items" class="space-y-3 w-full"></div>
   <button id="checkout-button" class="mt-4 bg-black text-white px-4 py-2 rounded hover:bg-[#d4af37] w-full">Checkout</button>
 </div>
 <script>
-  // Hide cart when touching footer or on #home/#latest
+  // Hide cart if not in #products or menu section, or if touching footer
   function handleCartFooterOverlap() {
     const cart = document.getElementById('cart-section');
     const footer = document.querySelector('footer');
     if (!cart || !footer) return;
 
-    // Hide cart if in #home or #latest section
-    const scrollY = window.scrollY || window.pageYOffset;
-    const home = document.getElementById('home');
-    const latest = document.getElementById('latest');
-    let hideBySection = false;
+    // Sections allowed to show cart
+    const allowedSections = [
+      document.getElementById('products'),
+      document.querySelector('section.py-10') // menu section
+    ];
 
-    if (home && latest) {
-      const homeRect = home.getBoundingClientRect();
-      const latestRect = latest.getBoundingClientRect();
-      // If top of viewport is within home or latest section
-      if (
-        (homeRect.top <= 80 && homeRect.bottom > 80) ||
-        (latestRect.top <= 80 && latestRect.bottom > 80)
-      ) {
-        hideBySection = true;
+    let showCart = false;
+    const header = document.getElementById('main-header');
+    const headerHeight = header ? header.offsetHeight : 0;
+
+    allowedSections.forEach(section => {
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        // If top of viewport is within the section
+        if (rect.top <= headerHeight && rect.bottom > headerHeight) {
+          showCart = true;
+        }
       }
-    }
+    });
 
-    if (hideBySection) {
+    if (!showCart) {
       cart.style.opacity = '0';
       cart.style.pointerEvents = 'none';
+      cart.setAttribute('aria-hidden', 'true');
       return;
     }
 
     const cartRect = cart.getBoundingClientRect();
     const footerRect = footer.getBoundingClientRect();
-
-    // If cart's bottom is below footer's top (overlap), hide cart
-    if (cartRect.bottom > footerRect.top) {
+    // If footer is visible in viewport and cart overlaps, hide cart
+    if (footerRect.top < window.innerHeight && cartRect.bottom > footerRect.top) {
       cart.style.opacity = '0';
       cart.style.pointerEvents = 'none';
+      cart.setAttribute('aria-hidden', 'true');
     } else {
       cart.style.opacity = '1';
       cart.style.pointerEvents = '';
+      cart.setAttribute('aria-hidden', 'false');
     }
   }
 
-  window.addEventListener('scroll', handleCartFooterOverlap);
-  window.addEventListener('resize', handleCartFooterOverlap);
+  // Debounce helper
+  function debounce(func, wait) {
+    let timeout;
+    return function () {
+      clearTimeout(timeout);
+      timeout = setTimeout(func, wait);
+    };
+  }
+
+  const debouncedHandleCartFooterOverlap = debounce(handleCartFooterOverlap, 100);
+
+  window.addEventListener('scroll', debouncedHandleCartFooterOverlap);
+  window.addEventListener('resize', debouncedHandleCartFooterOverlap);
   document.addEventListener('DOMContentLoaded', handleCartFooterOverlap);
 </script>
 
